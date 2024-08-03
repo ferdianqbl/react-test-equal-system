@@ -9,8 +9,13 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { QrCode } from "lucide-react";
+import { FC } from "react";
 
-const QRCodeModal = () => {
+type Props = {
+  data: any;
+};
+
+const QRCodeModal: FC<Props> = ({ data }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>

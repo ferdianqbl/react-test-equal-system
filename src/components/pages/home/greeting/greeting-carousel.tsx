@@ -3,21 +3,24 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import BgImg from "@/assets/motif.png";
 import Image from "next/image";
+import { FC } from "react";
 
-const GreetingCarousel = () => {
+type Props = {
+  data: any;
+};
+
+const GreetingCarousel: FC<Props> = ({ data }) => {
   return (
     <Carousel className="w-full">
       {/* <CarouselPrevious className="static" /> */}
       <CarouselContent className="">
-        {Array.from({ length: 5 }).map((_, index) => (
+        {data?.banner.map((item: any, index: any) => (
           <CarouselItem key={index}>
             <Image
-              src={BgImg}
+              src={item}
               width={400}
               height={200}
               alt="motif"

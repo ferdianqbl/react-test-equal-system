@@ -21,8 +21,9 @@ const callAPI = async ({ method, url, data, token, config }: Props) => {
       "Content-Type": "application/json",
       ...config?.headers,
     };
+
     if (token) {
-      headers["Authorization"] = `Bearer ${token}`;
+      headers["Authorization"] = token;
     }
     const response = await axios({
       method,
