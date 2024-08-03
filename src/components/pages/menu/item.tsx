@@ -1,25 +1,26 @@
 import Image from "next/image";
-import React from "react";
+import { FC } from "react";
+type Props = {
+  data: any;
+};
 
-const Item = () => {
+const Item: FC<Props> = ({ data }) => {
   return (
-    <div className="flex justify-between border-b p-2">
+    <div className="flex justify-between border-b p-2 bg-background">
       <div className="w-full flex">
         <Image
-          src="https://soal.staging.id/img/Hazelnut%20Belgian%20Chocolate.png"
+          src={data.photo}
           alt="Hazelnut Belgian Chocolate"
           width={100}
           height={100}
+          className="object-cover object-center"
         />
         <div className="flex flex-col">
-          <span className="font-medium">Raisin</span>
-          <span className="text-gray-400">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-            in?
-          </span>
+          <span className="font-medium">{data.name}</span>
+          <span className="text-gray-400">{data.description}</span>
         </div>
       </div>
-      <span className="font-medium">50.000</span>
+      <span className="font-medium">{data.price.toLocaleString("en-US")}</span>
     </div>
   );
 };

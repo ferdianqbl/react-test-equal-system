@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="sm:container">
       {loading ? (
         <div className="flex items-center justify-center h-screen">
           <LoaderIcon className={`w-5 h-5 animate-spin`} />
