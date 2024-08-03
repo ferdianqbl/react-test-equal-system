@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Logo from "@/assets/logo technopartner.png";
-import FormLogin from "@/components/pages/home/form-login";
+import FormLogin from "@/components/pages/login/form-login";
 
 const Page = () => {
   return (

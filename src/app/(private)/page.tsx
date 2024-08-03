@@ -1,7 +1,17 @@
+import Greeting from "@/components/pages/home/greeting";
+import GreetingCarousel from "@/components/pages/home/greeting/greeting-carousel";
+import Navbar from "@/components/pages/home/navbar";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      tst
+    <div>
+      <Navbar />
+      <div className="bg-img-company">
+        <div className="container py-4">
+          <Greeting />
+        </div>
+      </div>
+      <GreetingCarousel />
     </div>
   );
 }
