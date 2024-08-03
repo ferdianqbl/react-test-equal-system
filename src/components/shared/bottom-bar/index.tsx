@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <div className="fixed bottom-0 left-0 right-0 container py-4 flex items-center justify-center gap-8 shadow-top w-full">
+    <div className="fixed bottom-0 left-0 right-0 container py-4 flex items-center justify-center gap-8 shadow-top w-full z-50 bg-background">
       <NavItem
         link="/"
         title="Home"

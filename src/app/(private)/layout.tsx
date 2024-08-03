@@ -12,9 +12,9 @@ export default function PrivateLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="">
+    <div className="text-sm">
       <Navbar />
-      <main className="container pb-20">{children}</main>
+      <main className="pb-20">{children}</main>
     </div>
   );
 }

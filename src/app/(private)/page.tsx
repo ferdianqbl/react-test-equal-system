@@ -4,7 +4,7 @@ import Navbar from "@/components/pages/home/navbar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
       <div className="bg-img-company">
         <div className="container py-4">
